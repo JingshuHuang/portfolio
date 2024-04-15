@@ -1,8 +1,8 @@
-import Testimonial from "../Testimonial"
-import Title from "../Title"
-import MyResume from "./MyResume"
-import Skills from "./Skills"
-import { quoteData } from "../../data"
+import Testimonial from "../Testimonial";
+import Title from "../Title";
+import MyResume from "./MyResume";
+import Skills from "./Skills";
+import { quoteData } from "../../data";
 
 export default function Resume() {
   return (
@@ -12,9 +12,9 @@ export default function Resume() {
 
       <Title name="skills" />
       <Skills />
-
+      {/* 
       <Title name="quote" />
-      <Testimonial testimonial={quoteData} />
+      <Testimonial testimonial={quoteData} /> */}
     </section>
-  )
+  );
 }

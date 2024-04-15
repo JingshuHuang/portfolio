@@ -1,4 +1,4 @@
-import Typewriter from "typewriter-effect"
+import Typewriter from "typewriter-effect";
 
 export default function Typing() {
   return (
@@ -7,29 +7,23 @@ export default function Typing() {
         onInit={(typewriter) => {
           typewriter
             .typeString(
-              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">Programmer</span>'
+              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">Software Engineer</span>'
             )
             .pauseFor(3500)
             .deleteAll(17)
 
             .typeString(
-              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">Front-end Developer</span>'
+              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">ML/AI Engineer</span>'
             )
             .pauseFor(3500)
             .deleteAll(17)
 
             .typeString(
-              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">Back-end Developer</span>'
+              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">Full-stack Engineer</span>'
             )
             .pauseFor(3500)
             .deleteAll(17)
-
-            .typeString(
-              '<span style="color: #f59e0b; font-size: 14px; font-weight: 400;">Freelancer</span>'
-            )
-            .pauseFor(3500)
-            .deleteAll(17)
-            .start()
+            .start();
         }}
         options={{
           autoStart: true,
@@ -39,5 +33,5 @@ export default function Typing() {
         }}
       />
     </div>
-  )
+  );
 }

@@ -1,20 +1,20 @@
-import { useState } from "react"
-import MenuBtn from "./MenuBtn"
-import { BsBookHalf } from "react-icons/bs"
-import { menus } from "../data"
-import SideMenuLb from "./SideMenuLb"
-import { ReactiveVar, useReactiveVar } from "@apollo/client"
-import { currentMenu } from "../apollo-client"
+import { useState } from "react";
+import MenuBtn from "./MenuBtn";
+import { BsBookHalf } from "react-icons/bs";
+import { menus } from "../data";
+import SideMenuLb from "./SideMenuLb";
+import { ReactiveVar, useReactiveVar } from "@apollo/client";
+import { currentMenu } from "../apollo-client";
 
 interface Props {
-  showSideMenu: ReactiveVar<boolean>
+  showSideMenu: ReactiveVar<boolean>;
 }
 
 export default function Menus({ showSideMenu }: Props) {
-  const menuId = useReactiveVar(currentMenu)
+  const menuId = useReactiveVar(currentMenu);
 
   return (
-    <header className="xl:w-[7.2rem] lg:w-[7rem] py-6 h-full mr-4 hidden lg:flex flex-col justify-between">
+    <header className="xl:w-[7.2rem] lg:w-[7rem] h-full mr-4 hidden lg:flex flex-col justify-between py-28">
       {/* humburbar menu */}
       <div
         onClick={() => showSideMenu(true)}
@@ -41,7 +41,7 @@ export default function Menus({ showSideMenu }: Props) {
       </div>
 
       <div className="overflow-hidden rounded-lg">
-        {menus.slice(0, 6).map((m, i) => (
+        {menus.slice(0, -1).map((m, i) => (
           <MenuBtn
             key={m.id}
             menu={m}
@@ -52,5 +52,5 @@ export default function Menus({ showSideMenu }: Props) {
         ))}
       </div>
     </header>
-  )
+  );
 }

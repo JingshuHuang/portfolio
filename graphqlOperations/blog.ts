@@ -1,5 +1,6 @@
-import { gql } from "@apollo/client"
+import { gql } from "@apollo/client";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   Queries: {
     getBlogs: gql`
@@ -7,7 +8,7 @@ export default {
         blogs(skip: $skip, first: $first, orderBy: createdAt_DESC) {
           id
           blogUrl
-          date
+          dated
           description
           title
           thumbnail {
@@ -27,4 +28,4 @@ export default {
       }
     `,
   },
-}
+};

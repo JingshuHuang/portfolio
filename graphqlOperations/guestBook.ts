@@ -1,5 +1,6 @@
-import { gql } from "@apollo/client"
+import { gql } from "@apollo/client";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   Queries: {
     getComments: gql`
@@ -38,4 +39,4 @@ export default {
       }
     `,
   },
-}
+};

@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai"
+import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import {
   FaDev,
   FaDiscord,
@@ -7,24 +7,29 @@ import {
   FaRegListAlt,
   FaRegNewspaper,
   FaRegUser,
-} from "react-icons/fa"
-import { FiSend } from "react-icons/fi"
-import { MdComputer, MdDashboard } from "react-icons/md"
+} from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
+import { MdComputer, MdDashboard } from "react-icons/md";
 import {
+  SiAzuredevops,
   SiFigma,
   SiFirebase,
   SiFiverr,
   SiNextdotjs,
   SiNodedotjs,
-} from "react-icons/si"
-import About from "./components/aboutPage/About"
-import Blogs from "./components/blogsPage/Blogs"
-import DevBlogs from "./components/blogsPage/DevBlogs"
-import Contact from "./components/contactPage/Contact"
-import GuestBook from "./components/guestbookPage/GuestBook"
-import Resume from "./components/resumePage/Resume"
-import Stats from "./components/statistics/Stats"
-import Works from "./components/worksPage/Works"
+  SiPytorch,
+  SiSteamdb,
+  SiWeb3Dotjs,
+  SiWebpack,
+} from "react-icons/si";
+import About from "./components/aboutPage/About";
+import Blogs from "./components/blogsPage/Blogs";
+import DevBlogs from "./components/blogsPage/DevBlogs";
+import Contact from "./components/contactPage/Contact";
+import GuestBook from "./components/guestbookPage/GuestBook";
+import Resume from "./components/resumePage/Resume";
+import Stats from "./components/statistics/Stats";
+import Works from "./components/worksPage/Works";
 import {
   ClientData,
   MenuData,
@@ -32,7 +37,7 @@ import {
   SocialMedia,
   StatisticsData,
   TestimonialData,
-} from "./types"
+} from "./types";
 
 export const menus: MenuData[] = [
   {
@@ -53,18 +58,18 @@ export const menus: MenuData[] = [
     Icon: FaEye,
     Component: Works,
   },
-  {
-    id: 4,
-    label: "blog",
-    Icon: FaRegNewspaper,
-    Component: DevBlogs,
-  },
-  {
-    id: 5,
-    label: "stats",
-    Icon: MdDashboard,
-    Component: Stats,
-  },
+  // {
+  //   id: 4,
+  //   label: "blog",
+  //   Icon: FaRegNewspaper,
+  //   Component: DevBlogs,
+  // },
+  // {
+  //   id: 5,
+  //   label: "stats",
+  //   Icon: MdDashboard,
+  //   Component: Stats,
+  // },
   {
     id: 6,
     label: "contact",
@@ -77,7 +82,7 @@ export const menus: MenuData[] = [
     Icon: MdComputer,
     Component: GuestBook,
   },
-]
+];
 
 export const socialMedia: SocialMedia[] = [
   {
@@ -128,38 +133,52 @@ export const socialMedia: SocialMedia[] = [
     mediaUrl: "https://www.fiverr.com/sunnyislam990",
     info: "Hire me on fiverr as freelancer",
   },
-]
+];
 
 export const services: ServiceData[] = [
   {
     id: 1,
+    title: "Web and mobile",
+    Icon: SiWebpack,
+    description:
+      "Modern and mobile-ready website that will help you reach all of your marketing.",
+  },
+  {
+    id: 2,
+    title: "ML/AI",
+    Icon: SiPytorch,
+    description:
+      "Modern and mobile-ready website that will help you reach all of your marketing.",
+  },
+  {
+    id: 3,
     title: "Front-end",
     Icon: SiNextdotjs,
     description:
       "Modern and mobile-ready website that will help you reach all of your marketing.",
   },
   {
-    id: 2,
+    id: 4,
     title: "Back-end",
     Icon: SiNodedotjs,
     description:
       "Back-end with a NoSQL DB and API written in a standard express router or tRPC.",
   },
   {
-    id: 3,
-    title: "UI/UX design",
-    Icon: SiFigma,
+    id: 5,
+    title: "Database",
+    Icon: SiSteamdb,
     description:
       "Modern user Interface trends with a highly professional and unique design.",
   },
   {
-    id: 4,
-    title: "Firebase",
-    Icon: SiFirebase,
+    id: 6,
+    title: "DevOps",
+    Icon: SiAzuredevops,
     description:
       "Fully functional firebase app with authentication, firestore, storage, etc.",
   },
-]
+];
 
 export const clients: ClientData[] = [
   {
@@ -182,7 +201,7 @@ export const clients: ClientData[] = [
     linkLocation: "https://www.envato.com/",
     imgLocation: "/images/envato.png",
   },
-]
+];
 
 export const quoteData: TestimonialData = {
   id: "quote",
@@ -191,7 +210,7 @@ export const quoteData: TestimonialData = {
   userName: "Martin Fowler",
   userProfession: "Software Developer",
   userImage: { url: "/images/martin.jpg" },
-}
+};
 
 export const statisticsData: StatisticsData[] = [
   {
@@ -206,4 +225,4 @@ export const statisticsData: StatisticsData[] = [
     title: "clients",
     info: "40+",
   },
-]
+];

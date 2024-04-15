@@ -1,31 +1,31 @@
-import { ReactiveVar, useQuery, useReactiveVar } from "@apollo/client"
-import Image from "next/image"
+import { ReactiveVar, useQuery, useReactiveVar } from "@apollo/client";
+import Image from "next/image";
 import {
   Dispatch,
   SetStateAction,
   MouseEvent,
   useState,
   useEffect,
-} from "react"
-import { IoMdClose } from "react-icons/io"
-import { menus, socialMedia } from "../data"
-import SideMenuBtn from "./SideMenuBtn"
-import profileOperations from "../graphqlOperations/profile"
-import { partOfProfile, ProfileData } from "../types"
-import { currentMenu } from "../apollo-client"
+} from "react";
+import { IoMdClose } from "react-icons/io";
+import { menus, socialMedia } from "../data";
+import SideMenuBtn from "./SideMenuBtn";
+import profileOperations from "../graphqlOperations/profile";
+import { partOfProfile, ProfileData } from "../types";
+import { currentMenu } from "../apollo-client";
 
 interface Props {
-  sideMenu: boolean
-  showMenu: ReactiveVar<boolean>
-  profile: ProfileData
+  sideMenu: boolean;
+  showMenu: ReactiveVar<boolean>;
+  profile: ProfileData;
 }
 
 export default function SideMenuLb({ sideMenu, showMenu, profile }: Props) {
-  const menuId = useReactiveVar(currentMenu)
+  const menuId = useReactiveVar(currentMenu);
 
   function closeLb(e: MouseEvent): void {
     if ((e.target as Element).classList.contains("lb")) {
-      showMenu(false)
+      showMenu(false);
     }
   }
 
@@ -58,7 +58,7 @@ export default function SideMenuLb({ sideMenu, showMenu, profile }: Props) {
             </h3>
           </div>
 
-          <div className="flex gap-x-5 items-center justify-center">
+          {/* <div className="flex gap-x-5 items-center justify-center">
             {socialMedia.map(({ id, Icon, label, mediaUrl }) => (
               <a
                 rel="noreferrer"
@@ -70,7 +70,7 @@ export default function SideMenuLb({ sideMenu, showMenu, profile }: Props) {
                 <Icon className="text-gray-400 text-2xl transition-all duration-300 hover:text-main-orange" />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="bottom bg-gray-800 flex-grow">
@@ -97,10 +97,10 @@ export default function SideMenuLb({ sideMenu, showMenu, profile }: Props) {
           </a>
 
           <p className="text-center text-gray-500 text-xl mt-16 mb-10">
-            {"sunny's"} portfolio © 2022.
+            Portfolio © 2024
           </p>
         </div>
       </main>
     </section>
-  )
+  );
 }
