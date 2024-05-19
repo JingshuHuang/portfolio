@@ -6,6 +6,7 @@ import resumeOperations from "../../graphqlOperations/resume";
 import { ExperienceData } from "../../types";
 import { useQuery } from "@apollo/client";
 import { useMemo } from "react";
+import EducationItem from "./EducationItem";
 
 interface ExperienceQuery {
   resumes: ExperienceData[];
@@ -67,7 +68,7 @@ export default function MyResume() {
           </>
         ) : (
           filteredData[1].map((r, idx) => (
-            <ResumeItem
+            <EducationItem
               key={r.id}
               resume={r}
               border={idx !== filteredData[1].length - 1}
