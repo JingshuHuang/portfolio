@@ -22,7 +22,7 @@ export default function About() {
       <BrandLogos /> */}
 
       <Title name="testimonials" />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* 
       <Title name="fun facts" />
       <Facts /> */}
