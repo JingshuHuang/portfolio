@@ -78,6 +78,7 @@ interface FieldValueData {
 interface WorksData {
   id: string;
   title: string;
+  workUrl: string;
   images: { url: string }[];
   workTabs: { tab: String }[];
 }

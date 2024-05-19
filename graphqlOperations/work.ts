@@ -10,6 +10,7 @@ export default {
             node {
               id
               title
+              workUrl
               images(first: 1) {
                 url
               }
