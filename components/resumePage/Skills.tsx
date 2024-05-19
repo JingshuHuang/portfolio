@@ -38,13 +38,10 @@ export default function Skills() {
           <IconTitle title="Database" Icon={SiIcinga} />
           <Knowledge knowledge={data?.skills[0].databases} />
         </li>
-        <li className="px-12 pt-6">
+        {/* <li className="px-12 pt-6">
           <IconTitle title="ML/AI" Icon={SiIcinga} />
           <Knowledge knowledge={data?.skills[0].aiml} />
-        </li>
-      </ul>
-
-      <ul className="grid grid-cols-1 sm:grid-cols-2">
+        </li> */}
         <li className="px-12 pt-6">
           <IconTitle title="Other Technologies" Icon={SiGraphql} />
           <Knowledge knowledge={data?.skills[0].technologies} />

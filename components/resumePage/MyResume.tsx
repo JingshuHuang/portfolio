@@ -1,41 +1,41 @@
-import IconTitle from "./IconTitle"
-import ResumeItem from "./ResumeItem"
-import { FaGraduationCap, FaNetworkWired } from "react-icons/fa"
-import ResumeSkeleton from "./ResumeSkeleton"
-import resumeOperations from "../../graphqlOperations/resume"
-import { ExperienceData } from "../../types"
-import { useQuery } from "@apollo/client"
-import { useMemo } from "react"
+import IconTitle from "./IconTitle";
+import ResumeItem from "./ResumeItem";
+import { FaGraduationCap, FaNetworkWired } from "react-icons/fa";
+import ResumeSkeleton from "./ResumeSkeleton";
+import resumeOperations from "../../graphqlOperations/resume";
+import { ExperienceData } from "../../types";
+import { useQuery } from "@apollo/client";
+import { useMemo } from "react";
 
 interface ExperienceQuery {
-  resumes: ExperienceData[]
+  resumes: ExperienceData[];
 }
 
 export default function MyResume() {
   const { data, error } = useQuery<ExperienceQuery>(
     resumeOperations.Queries.getExperience
-  )
+  );
 
   const filteredData = useMemo<
     [ExperienceData[], ExperienceData[]] | undefined
   >(() => {
-    if (data === undefined) return undefined
-    const experience: ExperienceData[] = []
-    const education: ExperienceData[] = []
+    if (data === undefined) return undefined;
+    const experience: ExperienceData[] = [];
+    const education: ExperienceData[] = [];
     data.resumes.forEach((r) => {
       if (r.experience) {
-        experience.push(r)
+        experience.push(r);
       } else {
-        education.push(r)
+        education.push(r);
       }
-    })
-    return [experience, education]
-  }, [data])
+    });
+    return [experience, education];
+  }, [data]);
 
-  if (error) console.log(error)
+  if (error) console.log(error);
 
   return (
-    <ul className="grid sm:grid-cols-2 grid-cols-1">
+    <ul className="grid grid-cols-1">
       <li className="py-8 px-12">
         <IconTitle title="experience" Icon={FaNetworkWired} />
 
@@ -76,5 +76,5 @@ export default function MyResume() {
         )}
       </li>
     </ul>
-  )
+  );
 }

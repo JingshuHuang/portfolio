@@ -14,14 +14,14 @@ export default function About() {
 
       <Title name="development experience" />
       <MyServices />
-      {/* 
-      <Title name="pricing" />
-      <Prices /> */}
-      {/* 
+
+      {/* <Title name="pricing" />
+      <Prices />
+
       <Title name="clients" />
       <BrandLogos /> */}
 
-      <Title name="testimonials" />
+      {/* <Title name="testimonials" /> */}
       {/* <Testimonials /> */}
       {/* 
       <Title name="fun facts" />
